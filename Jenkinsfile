@@ -17,8 +17,13 @@ pipeline{
       {
         steps{
         sh 'docker search nginx'
-    }
-        
+    }    
+      }
+       stage("docker serach")
+      {
+        steps{
+        sh 'docker search nginx'
+        }
       }
     }
 }
