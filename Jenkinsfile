@@ -13,6 +13,10 @@ pipeline{
         sh 'docker pull centos'
         }
       }
+       stage("docker serach")
+      {
+        steps{
+        sh 'docker search nginx'
     }
 }
   
