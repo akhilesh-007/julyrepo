@@ -25,6 +25,13 @@ pipeline{
         sh 'docker run -itd --name webcent centos /bin/bash'
         }
       }
+       stage("running container")
+      {
+        steps{
+        sh 'docker exec -it --name webcent centos /bin/bash'
+          sh 'yum install httpd -y'
+        }
+      }
     }
 }
   
