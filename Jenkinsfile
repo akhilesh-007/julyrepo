@@ -18,5 +18,8 @@ pipeline{
         steps{
         sh 'docker search nginx'
     }
+        
+      }
+    }
 }
   
