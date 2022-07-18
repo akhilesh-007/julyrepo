@@ -4,7 +4,7 @@ pipeline{
       stage("git checkout")
       {
         steps{
-           git url: 'https://github.com/akhilesh-007/julyrepo.git', branch: 'main'
+           git url: 'https://github.com/akhilesh-007/julyrepo.git', branch: 'doc'
         }
       }
       stage("docker pull")
@@ -22,13 +22,13 @@ pipeline{
        stage("run container")
       {
         steps{
-        sh 'docker run -itd --name ng nginx /bin/bash'
+        sh 'docker run -itd --name ng1 nginx /bin/bash'
         }
       }
        stage("running container")
       {
         steps{
-        sh 'docker exec -it --name ng nginx /bin/bash'
+        sh 'docker exec -it ng1 /bin/bash'
           sh 'yum install httpd -y'
         }
       }
