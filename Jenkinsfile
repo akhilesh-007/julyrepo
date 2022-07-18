@@ -4,7 +4,7 @@ pipeline{
       stage("git checkout")
       {
         steps{
-           git 'https://github.com/akhilesh-007/jaipur123.git'
+           git 'https://github.com/akhilesh-007/jaipur123.git', branch: 'main'
         }
       }
       stage("docker pull")
