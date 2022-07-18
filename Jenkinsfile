@@ -22,13 +22,13 @@ pipeline{
        stage("run container")
       {
         steps{
-        sh 'docker run -itd --name webcent1 centos /bin/bash'
+        sh 'docker run -itd --name ng nginx /bin/bash'
         }
       }
        stage("running container")
       {
         steps{
-        sh 'docker exec -it --name webcent1 centos /bin/bash'
+        sh 'docker exec -it --name ng nginx /bin/bash'
           sh 'yum install httpd -y'
         }
       }
