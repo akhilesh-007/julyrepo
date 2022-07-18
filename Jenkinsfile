@@ -19,10 +19,10 @@ pipeline{
         sh 'docker search nginx'
     }    
       }
-       stage("docker serach")
+       stage("run container")
       {
         steps{
-        sh 'docker search nginx'
+        sh 'docker run -itd --name web centos /bin/bash '
         }
       }
     }
