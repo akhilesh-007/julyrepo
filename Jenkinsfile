@@ -22,7 +22,7 @@ pipeline{
        stage("run container")
       {
         steps{
-        sh 'docker run -itd --name web centos /bin/bash '
+        sh 'docker run -itd --name webcent centos /bin/bash'
         }
       }
     }
